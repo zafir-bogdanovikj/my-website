@@ -1,0 +1,377 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0a14;
+    font-family: 'Segoe UI', sans-serif;
+    color: #f0f0f0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px 0 20px;
+}
+
+/*Наслов*/
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    background: linear-gradient(to right, #00c87b, #00c896, #00f0ff);
+    display: inline-block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/*Навигациско мени*/
+header div {
+    display: flex;
+}
+
+header ul {
+    list-style: none;
+}
+
+header li {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    padding: 5px;
+}
+
+header ul:last-of-type li{
+    margin: 0;
+    min-width: 40px;
+}
+
+header a {
+    text-decoration: none;
+    color: #00c896;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ffffff;
+}
+
+
+/*Општо*/
+main section {
+    margin-bottom: 60px;
+    animation: fadeInUp 0.6s ease both;
+}
+
+main section h2 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00bcd4;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.card {
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+    color: #00f0ff;
+}
+
+.card h4 {
+    color: #ffffff;
+}
+
+.card span {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 0.85em;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.card p {
+    max-width: 900px;
+}
+
+/* Јазици */
+.languages{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.language{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 330px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.language p{
+    text-transform: lowercase;
+}
+
+.language h3 {
+    color: #ffffff;
+}
+
+.language p:nth-of-type(1) {
+    color: #00c87b;
+}
+.language p:nth-of-type(2) {
+    color: #00f0ff;
+}
+.language p:nth-of-type(3) {
+    color: #00bcd4;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card .skills .tehnicki {
+    width: 45%;
+}
+.card .skills .drugi {
+    width: 45%;
+}
+
+/* Секој skill контејнер */
+.skill {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.skills h3{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skill span {
+    position: static;
+    min-width: 100px;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: right;
+}
+
+.bar {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #00bcd4, #00c87b);
+    border-radius: 10px;
+    transition: width 1s ease-out;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box > div {
+    width: 300px;
+    height: 280px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.box > div :first-child{
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+.box  > div :last-child{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 2px;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.box  > div :last-child a{
+    text-decoration: none;
+}
+
+.box  > div :last-child a:hover{
+    font-weight: bold;
+}
+
+#hobi .card > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#hobi .card > div img{
+    border-radius: 3px;
+}
+
+#hobi .card p {
+    width: 600px;
+    padding: 20px 0;
+}
+
+footer {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 0.8em;
+    background: linear-gradient(#0a0a14 20%, #000000);
+    margin: auto;
+    padding: 30px;
+}
+footer .kontakt {
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1.2em;
+    padding: 50px;
+    border-bottom: 1px solid #aaaaaa;
+    margin: auto;
+}
+
+footer #name{
+    color: #00c896;
+}
+
+footer >p{
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+
+    header div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    header ul:last-of-type {
+        flex-direction: row;
+    }
+
+    header li {
+        min-width: auto;
+        max-height: 20px;
+        padding: 5px;
+    }
+
+    header ul:last-of-type li {
+        flex: 0 1 auto;
+    }
+
+    .card p {
+        font-size: 0.95em;
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box > div {
+        width: 90%;
+        height: auto;
+    }
+
+    .box img {
+        width: 100%;
+        height: auto;
+    }
+
+    #hobi .card > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hobi .card p {
+        width: 90%;
+        padding: 10px;
+        font-size: 0.95em;
+    }
+
+    #hobi .card img {
+        width: 90%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    #hobi .card div:nth-child(2) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
